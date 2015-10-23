@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xVk-6M-abu">
+                                <rect key="frame" x="120" y="126" width="361" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="361" id="sAQ-QG-2Wg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9X-l2-gWe">
+                                <rect key="frame" x="161" y="164" width="30" height="30"/>
+                                <state key="normal" title="切换"/>
+                                <connections>
+                                    <action selector="changeClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uH6-zk-ax3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="q9X-l2-gWe" firstAttribute="top" secondItem="xVk-6M-abu" secondAttribute="bottom" constant="8" id="Aqg-wt-Lc4"/>
+                            <constraint firstItem="xVk-6M-abu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="62" id="htT-kE-dwG"/>
+                            <constraint firstItem="xVk-6M-abu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ofE-RA-BGe"/>
+                            <constraint firstItem="q9X-l2-gWe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-124" id="qhZ-2c-3bQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eyP-PV-m5K"/>
+                    <connections>
+                        <outlet property="changeBtn" destination="q9X-l2-gWe" id="Fyv-sW-OmK"/>
+                        <outlet property="mytext" destination="xVk-6M-abu" id="KDu-rb-8jK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1284" y="212"/>
+        </scene>
+        <!--Mit Navigation Controller-->
+        <scene sceneID="v5v-z2-599">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KVV-7k-oiZ" customClass="MitNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FZd-fp-21h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tvJ-Se-T9b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mFJ-k3-fAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="335"/>
+        </scene>
+    </scenes>
+</document>
